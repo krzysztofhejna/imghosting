@@ -8,19 +8,23 @@ function start() {
     console.log("Zapytanie " + request.url + " odebrane.");
 
     response.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
-    case '/':
-    case '/start':
+    switch (request.url) {
+      case '/':
+      case '/start':
         handlers.welcome(request, response);
         break;
-    case '/upload':
+      case '/upload':
         handlers.upload(request, response);
         break;
-    default:
+      case '/show':
+        handlers.show(request, response);
+        break;
+      default:
         handlers.error(request, response);
+    }
   };
 
   http.createServer(onRequest).listen(9000);
-
   console.log("Uruchomiono serwer!".green);
 }
 
