@@ -2,16 +2,19 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Upload</h1>
-        <form action="/upload" enctype="multipart/form-data" method="post">
-            <label>Filename</label>
-            <input type="text" name="title">
-            <br>
-            <label>File</label>
-            <input type="file" name="upload" multiple="multiple"><br>
-            <input type="submit" value="Send">
-        </form>
+        <div class="container">
+            <h1 class="upload__header">Upload</h1>
+            <form action="/upload" enctype="multipart/form-data" method="post">
+                <label class="upload__label">Filename</label>
+                <input type="text" name="title">
+                <label class="upload__label">File</label>
+                <input type="file" name="upload" multiple="multiple">
+                <input class="upload__btn" type="submit" value="Send">
+            </form>
+        </div>
     </body>
 </html>

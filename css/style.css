@@ -1,0 +1,45 @@
+body {
+  background-color: #399ef1;
+  font-family: 'Merriweather', sans-serif;
+}
+
+.container,
+form {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  background-color: #399ef1;
+  color: #fff;
+  border: solid #fff 1px;
+  border-radius: 2px;
+}
+
+.upload__header {
+  margin-top: 0;
+}
+
+.upload__label {
+  margin: 1vh 0;
+  font-weight: bold;
+}
+
+.upload__btn {
+  cursor: pointer;
+  margin-top: 2vh;
+  padding: .5vh 0;
+  width: 30vw;
+  border: solid 2px #6DB8F1;
+}
+
+.upload__img {
+  max-height: 500px;
+}
